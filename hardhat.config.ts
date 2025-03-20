@@ -20,6 +20,7 @@ const DEFAULT_BLOCK_GAS_LIMIT = 12450000;
 const HARDFORK = 'london';
 
 const hardhatConfig = {
+  defaultNetwork: 'hardhat',
   gasReporter: {
     enabled: true,
   },
@@ -83,6 +84,25 @@ const hardhatConfig = {
         count: 20,
       },
     },
+    monadtest: {
+      url: 'https://testnet-rpc.monad.xyz',
+      chainId: 10143,
+    },
+  },
+  etherscan: {
+    apiKey: {
+      monadtest: process.env.ETHERSCAN_KEY,
+    },
+    customChains: [
+      {
+        network: 'monadtest',
+        chainId: 10143,
+        urls: {
+          apiURL: 'https://testnet.monadexplorer.com/api/',
+          browserURL: 'https://testnet.monadexplorer.com/',
+        },
+      },
+    ],
   },
   namedAccounts: {
     ...DEFAULT_NAMED_ACCOUNTS,

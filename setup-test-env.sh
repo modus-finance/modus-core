@@ -30,7 +30,7 @@ cp -r artifacts/* temp-artifacts
 
 # Import external @aave/periphery artifacts
 mkdir -p temp-artifacts/periphery
-cp -r node_modules/@aave/periphery-v3/artifacts/contracts/* temp-artifacts/periphery
+cp -r node_modules/@modus-finance/periphery-v3/artifacts/contracts/* temp-artifacts/periphery
 
 # Import external @aave/deploy artifacts
 mkdir -p temp-artifacts/deploy
